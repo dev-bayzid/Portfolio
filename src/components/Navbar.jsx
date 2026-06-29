@@ -1,6 +1,7 @@
+"use client";
 import Button from "@/ui/Button";
-import { Menu } from "lucide-react";
-
+import { Menu, X } from "lucide-react";
+import { useState } from "react";
 
 const navLink = [
   { href: "#about", label: "About" },
@@ -11,6 +12,8 @@ const navLink = [
 ];
 
 const Navbar = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
     <header className="fixed top-0 left-0 right-0 bg-transparent py-5">
       <nav className="container mx-auto px-6 flex items-center justify-between">
@@ -42,15 +45,32 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu Button */}
-        <button className="md:hidden p-2 text-foreground">
-            <Menu size={24}></Menu>
+        <button
+          className="md:hidden p-2 text-foreground"
+          onClick={() => setMobileMenuOpen((prev) => !prev)}
+        >
+          {mobileMenuOpen ? <X size={24} ></X> : <Menu size={24}></Menu>}
         </button>
-
-        {/* Mobile Menu */}
-        <div className="md:hidden glass-strong">
-
-        </div>
       </nav>
+
+      {/* Mobile Menu */}
+      {mobileMenuOpen && (
+        <div className="md:hidden glass-strong animate-fade-in">
+          <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
+            {navLink.map((link, ind) => (
+              <a
+                href={link.href}
+                key={ind}
+                className="text-lg text-muted-foreground hover:text-foreground py-2"
+              >
+                {link.label}
+              </a>
+            ))}
+
+            <Button>Contact Me</Button>
+          </div>
+        </div>
+      )}
     </header>
   );
 };
