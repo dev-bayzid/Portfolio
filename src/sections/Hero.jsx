@@ -1,7 +1,12 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { FiGithub } from "react-icons/fi";
+import { FaLinkedin, FaInstagram } from "react-icons/fa";
 import Image from "next/image";
+import Button from "@/ui/Button";
+import { ArrowRight, Download } from "lucide-react";
+import AnimatedButton from "@/ui/AnimatedButton";
 
 const Hero = () => {
   const [dots, setDots] = useState([]);
@@ -47,6 +52,71 @@ const Hero = () => {
             }}
           />
         ))}
+      </div>
+
+      {/* Content */}
+      <div className="container mx-auto px-6 pt-32 pb-20 relative z-10">
+        <div className="grid grid-cols-2 gap-12 items-center">
+          {/* Left Column - Text Content */}
+          <div className="space-y-8">
+            <div className="animate-fade-in">
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary">
+                <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
+                Software Engineer • React Specialist
+              </span>
+            </div>
+
+            {/* Headline */}
+            <div className="space-y-4">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100">
+                Crafting <span className="text-primary glow-text">digital</span>
+                <br />
+                experiences with
+                <br />
+                <span className="font-serif italic font-normal text-white">
+                  precision.
+                </span>
+              </h1>
+              <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200 animate-fade-in animation-delay-200">
+                Hi, I'm Bayzid Hasan — a passionate web developer and
+                cybersecurity enthusiast focused on building modern, responsive,
+                and performant web applications. I'm constantly learning,
+                experimenting, and growing as a developer.
+              </p>
+            </div>
+
+            {/* CTAs */}
+            <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
+              <Button size="lg">
+                Contact Me <ArrowRight className="w-5 h-5"></ArrowRight>
+              </Button>
+              <AnimatedButton>
+                <Download className="w-5 h-5"></Download> Download CV
+              </AnimatedButton>
+            </div>
+
+            {/* Social Links */}
+            <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
+              <span className="text-sm text-muted-foreground">Follow:</span>
+              {[
+                { icon: FiGithub, href: "https://github.com/dev-bayzid" },
+                {
+                  icon: FaLinkedin,
+                  href: "www.linkedin.com/in/bayzid-hasan-dev",
+                },
+                {
+                  icon: FaInstagram,
+                  href: "https://www.instagram.com/dev_bayzid/",
+                },
+              ].map((social, ind) => (
+                <a key={ind} href={social.href} className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary">
+                  {<social.icon size={28}/>}
+                </a>
+              ))}
+            </div>
+          </div>
+          {/* Right Column - Profile Image */}
+        </div>
       </div>
     </section>
   );
