@@ -56,7 +56,7 @@ const Hero = () => {
 
       {/* Content */}
       <div className="container mx-auto px-6 pt-32 pb-20 relative z-10">
-        <div className="grid grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Text Content */}
           <div className="space-y-8">
             <div className="animate-fade-in">
@@ -97,7 +97,7 @@ const Hero = () => {
 
             {/* Social Links */}
             <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
-              <span className="text-sm text-muted-foreground">Follow:</span>
+              <span className="text-sm text-muted-foreground">Follow me:</span>
               {[
                 { icon: FiGithub, href: "https://github.com/dev-bayzid" },
                 {
@@ -109,13 +109,21 @@ const Hero = () => {
                   href: "https://www.instagram.com/dev_bayzid/",
                 },
               ].map((social, ind) => (
-                <a key={ind} href={social.href} className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary">
+                <a key={ind} href={social.href} className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300">
                   {<social.icon size={28}/>}
                 </a>
               ))}
             </div>
           </div>
           {/* Right Column - Profile Image */}
+          <div className="relative animate-fade-in animation-delay-300 ">
+            {/* Profile Image */}
+            <div className="relative max-w-md mx-auto">
+                <div className="relative glass rounded-3xl p-2">
+                    <img src="/profile.jpg" alt="Bayzid Hasan" className="w-full aspect-[4/5] object-cover rounded-2xl" />
+                </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
