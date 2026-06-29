@@ -73,20 +73,20 @@
     border: 1px solid color-mix(in srgb, var(--color-border) 50%, transparent);
   }
 
-  /* .glass-strong {
+  .glass-strong {
     background-color: color-mix(in srgb, var(--color-surface) 80%, transparent);
     backdrop-filter: blur(24px);
     border: 1px solid color-mix(in srgb, var(--color-border) 60%, transparent);
-  } */
+  }
 
-  /* .glow-text {
+  .glow-text {
     text-shadow: 0 0 30px
       color-mix(in srgb, var(--color-primary) 50%, transparent);
-  } */
+  }
 
-  /* .glow-border {
+  .glow-border {
     box-shadow: 0 0 20px
         color-mix(in srgb, var(--color-primary) 20%, transparent),
       inset 0 0 20px color-mix(in srgb, var(--color-primary) 5%, transparent);
-  } */
+  }
 }
