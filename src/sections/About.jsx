@@ -85,11 +85,19 @@ const About = () => {
           {/* Right Column - Highlights */}
           <div className="grid sm:grid-cols-2 gap-6">
             {highlights.map((item, ind) => (
-                <div key={ind} className="glass p-6 rounded-2xl animate-fade-in"  style={{ animationDelay: `${(ind + 1) * 100}ms` }}>
-                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 hover:bg-primary/20"><item.icon className="w-6 h-6 text-primary"/></div>
-                    <h3 className="w-6 h-6 text-primary">{item.title}</h3>
-                    <p className="text-sm text-muted-foreground">{item.description}</p>
-                    </div>
+              <div
+                key={ind}
+                className="glass p-6 rounded-2xl animate-fade-in"
+                style={{ animationDelay: `${(ind + 1) * 100}ms` }}
+              >
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 hover:bg-primary/20">
+                  <item.icon className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="w-6 h-6 text-primary">{item.title}</h3>
+                <p className="text-sm text-muted-foreground">
+                  {item.description}
+                </p>
+              </div>
             ))}
           </div>
         </div>
