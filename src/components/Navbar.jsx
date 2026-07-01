@@ -55,7 +55,7 @@ const Navbar = () => {
           <Button size="sm">Contact Me</Button>
         </div>
 
-        {/* Mobile Menu Button */}
+        {/* Mobile Menu Button on Mobile */}
         <button
           className="md:hidden p-2 text-foreground"
           onClick={() => setMobileMenuOpen((prev) => !prev)}
