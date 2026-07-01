@@ -4,7 +4,7 @@ import Contact from "@/sections/Contact";
 import Experience from "@/sections/Journey";
 import Hero from "@/sections/Hero";
 import Projects from "@/sections/Projects";
-import Testimonial from "@/sections/Testimonial";
+import Testimonial from "@/sections/Education";
 
 
 export default function Home() {
