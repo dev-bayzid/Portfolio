@@ -91,9 +91,9 @@ const Hero = () => {
                 </span>
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200 animate-fade-in animation-delay-200">
-                Hi, I'm Bayzid Hasan — a passionate web developer and
+                Hi, I&apos;m Bayzid Hasan — a passionate web developer and
                 cybersecurity enthusiast focused on building modern, responsive,
-                and performant web applications. I'm constantly learning,
+                and performant web applications. I&apos;m constantly learning,
                 experimenting, and growing as a developer.
               </p>
             </div>
@@ -115,7 +115,7 @@ const Hero = () => {
                 { icon: FiGithub, href: "https://github.com/dev-bayzid" },
                 {
                   icon: FaLinkedin,
-                  href: "www.linkedin.com/in/bayzid-hasan-dev",
+                  href: "https://www.linkedin.com/in/bayzid-hasan-dev",
                 },
                 {
                   icon: FaInstagram,

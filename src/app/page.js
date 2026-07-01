@@ -5,6 +5,7 @@ import Experience from "@/sections/Journey";
 import Hero from "@/sections/Hero";
 import Projects from "@/sections/Projects";
 import Testimonial from "@/sections/Education";
+import Footer from "@/components/Footer";
 
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
         <Testimonial></Testimonial>
         <Contact></Contact>
       </main>
+      <Footer></Footer>
 
     </div>
   );
