@@ -7,16 +7,16 @@ const education = [
     title: "Higher Secondary Certificate (HSC)",
     subtitle: "Science • HSC 2nd Year",
     description:
-      "Currently pursuing Higher Secondary education while developing practical skills in modern web development.",
-    tags: ["Science", "Mathematics", "English"],
+      "Currently pursuing Higher Secondary education after successfully completing my Secondary School Certificate (SSC). Alongside my studies, I continue to build practical skills in modern web development.",
+    tags: ["HSC", "Science", "SSC Graduate"],
   },
   {
     icon: Laptop,
     period: "2026 — Present",
-    title: "Complete Web Development Course",
-    subtitle: "Programming Hero", // Change if needed
+    title: "AI-Powered Future-Ready Web Dev",
+    subtitle: "Professional Web Development Bootcamp", // Change if needed
     description:
-      "Learning modern frontend development through a structured course, covering React, Next.js, Tailwind CSS, Git, and industry best practices.",
+      "Enrolled in a project-based bootcamp focused on modern frontend development. Building real-world applications with React, Next.js, Tailwind CSS, Git, and industry best practices while preparing for professional software development.",
     tags: ["React", "Next.js", "Tailwind CSS", "Git"],
   },
   {
@@ -97,7 +97,7 @@ const Testimonial = () => {
 
                 <p className="text-muted-foreground mt-1">{item.subtitle}</p>
 
-                <p className="text-muted-foreground mt-6 leading-relaxed">
+                <p className="text-muted-foreground mt-6 leading-relaxed text-sm">
                   {item.description}
                 </p>
 
