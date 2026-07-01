@@ -30,7 +30,7 @@ const education = [
   },
 ];
 
-const Testimonial = () => {
+const Education = () => {
   return (
     <section id="education" className="py-32 relative overflow-hidden">
       <div
@@ -120,4 +120,4 @@ const Testimonial = () => {
   );
 };
 
-export default Testimonial;
+export default Education;

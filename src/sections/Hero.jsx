@@ -75,7 +75,7 @@ const Hero = () => {
             <div className="animate-fade-in">
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary">
                 <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-                Software Engineer • React Specialist
+               Open to Internships • Frontend Developer
               </span>
             </div>
 
@@ -90,7 +90,7 @@ const Hero = () => {
                   precision.
                 </span>
               </h1>
-              <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200 animate-fade-in animation-delay-200">
+              <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animate-fade-in animation-delay-200">
                 Hi, I&apos;m Bayzid Hasan — a passionate web developer and
                 cybersecurity enthusiast focused on building modern, responsive,
                 and performant web applications. I&apos;m constantly learning,
@@ -138,10 +138,12 @@ const Hero = () => {
             <div className="relative max-w-md mx-auto">
               <div className="absolute inset-0 rounded-3xl bg-linear-to-br from-primary/30 via-transparent to-primary/10 blur-2xl animate-pulse" />
               <div className="relative glass rounded-3xl p-2 glow-border">
-                <img
+                <Image
                   src="/profile.jpg"
-                  alt="Bayzid Hasan"
-                  className="w-full aspect-[4/5] object-cover rounded-2xl"
+                  alt="Bayzid Hasan - Software Engineer"
+                  width={500}
+                  height={625}
+                  className="w-full aspect-4/5 object-cover rounded-2xl"
                 />
 
                 {/* Floating Badge */}

@@ -1,12 +1,11 @@
 import Navbar from "@/components/Navbar";
 import About from "@/sections/About";
 import Contact from "@/sections/Contact";
-import Experience from "@/sections/Journey";
+import Journey from "@/sections/Journey";
 import Hero from "@/sections/Hero";
 import Projects from "@/sections/Projects";
-import Testimonial from "@/sections/Education";
 import Footer from "@/components/Footer";
-
+import Education from "@/sections/Education";
 
 export default function Home() {
   return (
@@ -16,12 +15,11 @@ export default function Home() {
         <Hero></Hero>
         <About></About>
         <Projects></Projects>
-        <Experience></Experience>
-        <Testimonial></Testimonial>
+        <Journey></Journey>
+        <Education></Education>
         <Contact></Contact>
       </main>
       <Footer></Footer>
-
     </div>
   );
 }

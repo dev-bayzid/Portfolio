@@ -159,6 +159,8 @@ const Contact = () => {
                   Email
                 </label>
                 <input
+                  id="email"
+                  type="email"
                   required
                   value={formData.email}
                   onChange={(e) => {
@@ -177,6 +179,7 @@ const Contact = () => {
                   Message
                 </label>
                 <textarea
+                  id="message"
                   rows={5}
                   required
                   value={formData.message}
