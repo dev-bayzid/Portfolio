@@ -1,6 +1,7 @@
 "use client";
 import Button from "@/ui/Button";
 import { Menu, X } from "lucide-react";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const navLink = [
@@ -8,6 +9,7 @@ const navLink = [
   { href: "#projects", label: "Projects" },
   { href: "#journey", label: "Journey" },
   { href: "#education", label: "Education" },
+  { href: "#contact", label: "Contact" },
 ];
 
 const Navbar = () => {
@@ -52,7 +54,9 @@ const Navbar = () => {
 
         {/* CTA Button */}
         <div className="hidden md:block">
-          <Button size="sm">Contact Me</Button>
+          <a href="#contact">
+            <Button size="sm">Contact Me</Button>
+          </a>
         </div>
 
         {/* Mobile Menu Button on Mobile */}
@@ -79,7 +83,9 @@ const Navbar = () => {
               </a>
             ))}
 
-            <Button onClick={() => setMobileMenuOpen(false)}>Contact Me</Button>
+            <a href="#contact" onClick={() => setMobileMenuOpen(false)}>
+              <Button>Contact Me</Button>
+            </a>
           </div>
         </div>
       )}
