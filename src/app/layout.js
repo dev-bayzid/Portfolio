@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://your-domain.com"), // আপনার আসল deploy URL দিন
+  metadataBase: new URL("https://bayzid-dev.vercel.app/"), 
   title: "Bayzid Hasan | Frontend Developer",
   description:
     "Portfolio of Bayzid Hasan — a frontend developer specializing in React, Next.js, and modern, responsive web applications.",
@@ -30,7 +30,7 @@ export const metadata = {
     title: "Bayzid Hasan | Frontend Developer",
     description:
       "Portfolio showcasing projects, skills, and my journey as a frontend developer.",
-    url: "https://your-domain.com", // আপনার আসল deploy URL দিন
+    url: "https://bayzid-dev.vercel.app/", 
     siteName: "Bayzid Hasan Portfolio",
     images: [
       {
