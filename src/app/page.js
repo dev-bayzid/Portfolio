@@ -6,10 +6,12 @@ import Hero from "@/sections/Hero";
 import Projects from "@/sections/Projects";
 import Footer from "@/components/Footer";
 import Education from "@/sections/Education";
+import ScrollProgress from "@/components/ScrollProgress";
 
 export default function Home() {
   return (
     <div className="min-h-screen overflow-x-hidden">
+      <ScrollProgress></ScrollProgress>
       <Navbar></Navbar>
       <main>
         <Hero></Hero>

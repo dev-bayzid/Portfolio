@@ -1,3 +1,4 @@
+import FadeIn from "@/ui/FadeIn";
 import { Code2, Lightbulb, Rocket, Users } from "lucide-react";
 
 const highlights = [
@@ -48,26 +49,26 @@ const About = () => {
 
             <div className="space-y-4 text-muted-foreground animate-fade-in animation-delay-200">
               <p>
-                I'm Bayzid, a student and aspiring developer with a strong
+                I&apos;m Bayzid, a student and aspiring developer with a strong
                 curiosity for technology and problem-solving. I enjoy building
                 modern web experiences and continuously learning new skills in
                 software development and cybersecurity. For me, technology is
-                not just about writing code—it's about creating solutions that
-                make an impact.
+                not just about writing code&mdash;it&apos;s about creating
+                solutions that make an impact.
               </p>
               <p>
-                Beyond programming, I'm an active athlete who plays basketball,
-                hockey, and handball. Sports have taught me discipline,
-                teamwork, leadership, and the importance of staying consistent
-                even when things become challenging. These qualities shape the
-                way I approach both my academic and technical journey.
+                Beyond programming, I&apos;m an active athlete who plays
+                basketball, hockey, and handball. Sports have taught me
+                discipline, teamwork, leadership, and the importance of staying
+                consistent even when things become challenging. These qualities
+                shape the way I approach both my academic and technical journey.
               </p>
               <p>
                 I also have a deep passion for traveling and exploring new
-                places and cultures. Although I haven't had the opportunity to
-                travel as much as I would like, I believe every new experience
-                offers valuable lessons and broadens my perspective on life and
-                people.
+                places and cultures. Although I haven&apos;t had the opportunity
+                to travel as much as I would like, I believe every new
+                experience offers valuable lessons and broadens my perspective
+                on life and people.
               </p>
             </div>
 
@@ -75,7 +76,7 @@ const About = () => {
               <p className="text-lg font-medium italic text-foreground">
                 My goal is to keep growing as a developer, expand my knowledge
                 in emerging technologies, and build projects that combine
-                creativity with functionality. I'm always excited to learn,
+                creativity with functionality. I&apos;m always excited to learn,
                 collaborate, and take on new challenges that push me to become
                 better every day.
               </p>
@@ -85,19 +86,17 @@ const About = () => {
           {/* Right Column - Highlights */}
           <div className="grid sm:grid-cols-2 gap-6">
             {highlights.map((item, ind) => (
-              <div
-                key={ind}
-                className="glass p-6 rounded-2xl animate-fade-in"
-                style={{ animationDelay: `${(ind + 1) * 100}ms` }}
-              >
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 hover:bg-primary/20">
-                  <item.icon className="w-6 h-6 text-primary" />
+              <FadeIn key={ind} delay={ind * 0.1}>
+                <div className="glass p-6 rounded-2xl">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 hover:bg-primary/20">
+                    <item.icon className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="w-6 h-6 text-primary">{item.title}</h3>
+                  <p className="text-sm text-muted-foreground">
+                    {item.description}
+                  </p>
                 </div>
-                <h3 className="w-6 h-6 text-primary">{item.title}</h3>
-                <p className="text-sm text-muted-foreground">
-                  {item.description}
-                </p>
-              </div>
+              </FadeIn>
             ))}
           </div>
         </div>

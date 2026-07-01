@@ -1,3 +1,4 @@
+import FadeIn from "@/ui/FadeIn";
 import { Database, GraduationCap, Laptop } from "lucide-react";
 
 const education = [
@@ -81,37 +82,39 @@ const Education = () => {
             const Icon = item.icon;
 
             return (
-              <div
-                key={index}
-                className="glass rounded-3xl p-8 glow-border border border-primary/20 hover:border-primary/50 transition-all duration-500 hover:-translate-y-2 group"
-              >
-                <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-primary-foreground transition-all">
-                  <Icon className="w-7 h-7" />
+              <FadeIn key={index} delay={index * 0.1}>
+                <div
+                  key={index}
+                  className="glass rounded-3xl p-8 glow-border border border-primary/20 hover:border-primary/50 transition-all duration-500 hover:-translate-y-2 group"
+                >
+                  <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-primary-foreground transition-all">
+                    <Icon className="w-7 h-7" />
+                  </div>
+
+                  <span className="text-primary text-sm font-medium">
+                    {item.period}
+                  </span>
+
+                  <h3 className="text-2xl font-semibold mt-3">{item.title}</h3>
+
+                  <p className="text-muted-foreground mt-1">{item.subtitle}</p>
+
+                  <p className="text-muted-foreground mt-6 leading-relaxed text-sm">
+                    {item.description}
+                  </p>
+
+                  <div className="flex flex-wrap gap-2 mt-8">
+                    {item.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="px-3 py-1 rounded-full bg-surface text-sm text-muted-foreground"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-
-                <span className="text-primary text-sm font-medium">
-                  {item.period}
-                </span>
-
-                <h3 className="text-2xl font-semibold mt-3">{item.title}</h3>
-
-                <p className="text-muted-foreground mt-1">{item.subtitle}</p>
-
-                <p className="text-muted-foreground mt-6 leading-relaxed text-sm">
-                  {item.description}
-                </p>
-
-                <div className="flex flex-wrap gap-2 mt-8">
-                  {item.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="px-3 py-1 rounded-full bg-surface text-sm text-muted-foreground"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
+              </FadeIn>
             );
           })}
         </div>
