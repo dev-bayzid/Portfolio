@@ -2,6 +2,7 @@ import { Playfair_Display, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import CustomCursor from "@/components/CustomCursor";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-sans",
@@ -58,8 +59,10 @@ export default function RootLayout({ children }) {
     <html
       lang="en"
       className={`${spaceGrotesk.variable} ${playfairDisplay.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col">
+        <CustomCursor></CustomCursor>
         {children}
         <Analytics></Analytics>
         <SpeedInsights></SpeedInsights>

@@ -1,7 +1,6 @@
 "use client";
 import Button from "@/ui/Button";
 import { Menu, X } from "lucide-react";
-import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const navLink = [
