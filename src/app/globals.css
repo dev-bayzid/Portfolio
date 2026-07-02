@@ -58,11 +58,11 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-sans), sans-serif;
   }
 
   .font-serif {
-    font-family: "Playfair Display", serif;
+    font-family: var(--font-serif), serif;
   }
 }
 
@@ -85,12 +85,11 @@
   }
 
   .glow-border {
-    box-shadow: 0 0 20px
-        color-mix(in srgb, var(--color-primary) 20%, transparent),
+    box-shadow:
+      0 0 20px color-mix(in srgb, var(--color-primary) 20%, transparent),
       inset 0 0 20px color-mix(in srgb, var(--color-primary) 5%, transparent);
   }
 }
-
 
 @layer utilities {
   @keyframes fade-in {
@@ -201,8 +200,8 @@
   }
 
   .timeline-glow {
-    box-shadow: 0 0 40px
-        color-mix(in srgb, var(--color-primary) 35%, transparent),
+    box-shadow:
+      0 0 40px color-mix(in srgb, var(--color-primary) 35%, transparent),
       0 0 80px color-mix(in srgb, var(--color-primary) 25%, transparent);
   }
 }

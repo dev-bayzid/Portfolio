@@ -21,19 +21,16 @@ const skills = [
   "GitHub Actions",
 ];
 
-const Hero = () => {
-  const [dots, setDots] = useState([]);
+const generateDots = () =>
+  Array.from({ length: 30 }, () => ({
+    left: Math.random() * 100,
+    top: Math.random() * 100,
+    duration: 15 + Math.random() * 20,
+    delay: Math.random() * 5,
+  }));
 
-  useEffect(() => {
-    setDots(
-      Array.from({ length: 30 }, () => ({
-        left: Math.random() * 100,
-        top: Math.random() * 100,
-        duration: 15 + Math.random() * 20,
-        delay: Math.random() * 5,
-      })),
-    );
-  }, []);
+const Hero = () => {
+  const [dots] = useState(generateDots());
 
   return (
     <section className="relative min-h-screen overflow-hidden flex items-center">
@@ -75,7 +72,7 @@ const Hero = () => {
             <div className="animate-fade-in">
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary">
                 <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-               Open to Internships • Frontend Developer
+                Open to Internships • Frontend Developer
               </span>
             </div>
 
@@ -100,9 +97,11 @@ const Hero = () => {
 
             {/* CTAs */}
             <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
-              <Button size="lg">
-                Contact Me <ArrowRight className="w-5 h-5"></ArrowRight>
-              </Button>
+              <a href="#contact">
+                <Button size="lg">
+                  Contact Me <ArrowRight className="w-5 h-5"></ArrowRight>
+                </Button>
+              </a>
               <AnimatedButton>
                 <Download className="w-5 h-5"></Download> Download CV
               </AnimatedButton>
