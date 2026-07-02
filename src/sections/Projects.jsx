@@ -1,7 +1,10 @@
+"use client";
+import Image from "next/image";
 import AnimatedButton from "@/ui/AnimatedButton";
 import FadeIn from "@/ui/FadeIn";
 import { ArrowUpRight } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
+import { useState } from "react";
 
 const projects = [
   {
@@ -11,7 +14,7 @@ const projects = [
     image: "/projects/projects03.png",
     tags: ["Next", "Javascript", "Tailwind"],
     link: "#",
-    github: "#",
+    github: "https://github.com/dev-bayzid/Keen-keeper",
   },
   {
     title: "E-Commerce Platform",
@@ -20,7 +23,7 @@ const projects = [
     image: "/projects/projects02.png",
     tags: ["Next.js", "Stripe", "PostgreSQL", "Tailwind"],
     link: "#",
-    github: "#",
+    github: "https://github.com/dev-bayzid/Digitools-platform",
   },
   {
     title: "AI Writing Assistant",
@@ -29,7 +32,7 @@ const projects = [
     image: "/projects/projects01.png",
     tags: ["React", "OpenAI", "Python", "FastAPI"],
     link: "#",
-    github: "#",
+    github: "https://github.com/dev-bayzid/book-vibe",
   },
   {
     title: "Project Management Tool",
@@ -38,9 +41,31 @@ const projects = [
     image: "/projects/projects04.png",
     tags: ["Next.js", "Socket.io", "MongoDB", "Redis"],
     link: "#",
-    github: "#",
+    github: "https://github.com/dev-bayzid/English-Janala",
   },
 ];
+
+// Image with skeleton loading state
+const ProjectImage = ({ src, alt }) => {
+  const [loaded, setLoaded] = useState(false);
+
+  return (
+    <>
+      {/* Skeleton shown until the image finishes loading */}
+      {!loaded && <div className="absolute inset-0 bg-surface animate-pulse" />}
+
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        onLoadingComplete={() => setLoaded(true)}
+        className={`w-full h-full object-cover transition-all duration-700 group-hover:scale-110 ${
+          loaded ? "opacity-100" : "opacity-0"
+        }`}
+      />
+    </>
+  );
+};
 
 const Projects = () => {
   return (
@@ -74,11 +99,7 @@ const Projects = () => {
               <div className="group glass rounded-2xl overflow-hidden md:row-span-1">
                 {/* Image */}
                 <div className="relative overflow-hidden aspect-video">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
+                  <ProjectImage src={project.image} alt={project.title} />
                   <div
                     className="absolute inset-0 
                 bg-linear-to-t from-card via-card/50
